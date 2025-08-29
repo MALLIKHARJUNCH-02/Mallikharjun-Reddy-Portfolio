@@ -21,7 +21,7 @@ const Internships = () => {
                         <h3 className="text-xl font-semibold text-gray-200">{intern.role}</h3>
                         <p className="text-gray-300">{intern.company}</p>
                         <p className="text-sm text-gray-500">{intern.duration}</p>
-                        <p className="mt-2 text-gray-500 dark:text-gray-300">{intern.description}</p>
+                        <p className="mt-2 text-gray-300 dark:text-gray-300">{intern.description}</p>
                     </motion.div>
                 ))}
             </div>
