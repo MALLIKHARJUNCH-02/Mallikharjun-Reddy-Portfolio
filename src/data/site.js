@@ -107,6 +107,12 @@ const siteData = {
 
   projects: [
     {
+      title: "SpiceSprint – Full Stack Grocery Delivery App (In Progress)",
+      description: "Full-stack grocery delivery app using React, Node.js, Express, MongoDB, and Bootstrap with secure authentication, responsive UI, and deployed backend on Render and frontend on Vercel; actively developing features like order management and delivery tracking.",
+      link: "https://github.com/MALLIKHARJUNCH-02/spicesprint-fe-be.git",
+      livelink: "https://spice-sprint.vercel.app/"
+    },
+    {
       title: "Online Test Platform",
       description: "A scalable MERN-based online exam platform with JWT authentication, real-time countdown, dynamic questions, automatic submission, and instant scoring.",
       link: "https://github.com/MALLIKHARJUNCHILUKURI-02/Online-Test-Platform-React-App-.git"

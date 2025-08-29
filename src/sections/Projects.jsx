@@ -25,6 +25,17 @@ const Projects = () => {
                                 className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline">
                                 View Project →
                             </a>
+                            {project.livelink && (
+                                <a
+                                    href={project.livelink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block m-4 text-blue-600 dark:text-blue-400 hover:underline"
+                                >
+                                    View live →
+                                </a>
+                            )}
+
                         </motion.div>
                     ))}
                 </div>
