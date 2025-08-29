@@ -19,8 +19,8 @@ const Certifications = () => {
                             transition={{ duration: 0.6 }}
                              key={index} 
                              className="p-4 rounded-xl shadow-md bg-gray-800">
-                            <h3 className="text-lg font-semibold">{cert.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300">
+                            <h3 className="text-lg font-semibold text-gray-200">{cert.title}</h3>
+                            <p className="text-gray-400">
                                 {cert.issuer} • {cert.year}
                             </p>
                         </motion.li>
