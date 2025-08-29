@@ -3,7 +3,7 @@ import siteData from "../data/site";
 import { motion } from "framer-motion";
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-16 bg-gray-950">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
