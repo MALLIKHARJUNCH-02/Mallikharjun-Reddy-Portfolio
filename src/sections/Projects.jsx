@@ -9,7 +9,7 @@ const Projects = () => {
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+                    className="text-3xl font-bold text-center mb-10 text-gray-100">
                     Projects
                 </motion.h2>
                 <div className="grid sm:grid-cols-2 gap-8">
@@ -18,7 +18,7 @@ const Projects = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            key={index} className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800">
+                            key={index} className="p-6 rounded-2xl shadow-md bg-gray-500 dark:bg-gray-800">
                             <h3 className="text-xl font-semibold">{project.title}</h3>
                             <p className="mt-2 text-gray-700 dark:text-gray-300">{project.description}</p>
                             <a href={project.link} target="_blank" rel="noopener noreferrer"

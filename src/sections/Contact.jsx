@@ -9,14 +9,14 @@ const Contact = () => {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
+          className="text-3xl font-bold mb-6 text-gray-100">
           Contact Me
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 30, scale: 0.1 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-gray-700 dark:text-gray-300 mb-4">
+          className="text-gray-200 mb-4">
           Feel free to reach out for opportunities or collaborations.
         </motion.p>
         <div className="space-y-2">

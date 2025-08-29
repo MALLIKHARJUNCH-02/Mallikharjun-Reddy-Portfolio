@@ -9,7 +9,7 @@ const Education = () => {
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }} className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
+                    transition={{ duration: 0.6 }} className="text-3xl font-bold text-center mb-10 text-gray-100">
                     Education
                 </motion.h2>
                 {siteData.education.map((edu, index) => (
@@ -17,7 +17,7 @@ const Education = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-100 dark:bg-gray-800">
+                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800">
                         <h3 className="text-xl font-semibold">{edu.degree}</h3>
                         <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
                         <p className="text-sm text-gray-500">{edu.year}</p>
