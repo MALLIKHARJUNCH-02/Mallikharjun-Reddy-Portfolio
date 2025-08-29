@@ -1,0 +1,32 @@
+// import SkipLink from "./components/SkipLink";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Education from "./sections/Education";
+import Certifications from "./sections/Certifications";
+import Internships from "./sections/Internships";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+
+export default function App(){
+  return (
+    <>
+      {/* <SkipLink /> */}
+      <a id="main" className="sr-only" href="#"></a>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Education />
+        <Certifications />
+        <Internships />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+}
