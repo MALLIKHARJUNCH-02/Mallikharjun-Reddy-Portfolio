@@ -9,7 +9,7 @@ const Internships = () => {
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">
+                    className="text-3xl font-bold text-center mb-10 text-gray-100 dark:text-white">
                     Internships
                 </motion.h2>
                 {siteData.internships.map((intern, index) => (
@@ -17,11 +17,11 @@ const Internships = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-100 dark:bg-gray-800">
-                        <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300">{intern.role}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">{intern.company}</p>
+                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 dark:bg-gray-800">
+                        <h3 className="text-xl font-semibold text-gray-400 dark:text-gray-300">{intern.role}</h3>
+                        <p className="text-gray-400 dark:text-gray-300">{intern.company}</p>
                         <p className="text-sm text-gray-500">{intern.duration}</p>
-                        <p className="mt-2 text-gray-700 dark:text-gray-200">{intern.description}</p>
+                        <p className="mt-2 text-gray-500 dark:text-gray-200">{intern.description}</p>
                     </motion.div>
                 ))}
             </div>
