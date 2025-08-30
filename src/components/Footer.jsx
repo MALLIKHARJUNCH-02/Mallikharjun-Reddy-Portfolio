@@ -1,5 +1,5 @@
 import React from "react";
-
+import siteData from "../data/site";
 export default function Footer() {
   return (
     <footer className="bg-gray-100 py-8 text-center text-gray-600 mt-20">
@@ -13,7 +13,7 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/mallikharjun-reddy-chilukuri-754b92241" target="_blank" rel="noreferrer" className="hover:text-indigo-600">
           LinkedIn
         </a>
-        <a href="mkreddychilukuri075@gmail.com" className="hover:text-indigo-600">
+        <a href={`mailto:${siteData.contact.email}`} className="hover:text-indigo-600">
           Email
         </a>
       </div>

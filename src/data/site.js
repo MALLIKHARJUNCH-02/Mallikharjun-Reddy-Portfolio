@@ -63,7 +63,7 @@ const siteData = {
       year: "Oct 2024"
     },
     {
-      title: "TCareer Essentials in Generative AI by Microsoft and LinkedIn",
+      title: "Career Essentials in Generative AI by Microsoft and LinkedIn",
       issuer: "Microsoft ",
       year: "Jul 2024"
     },
