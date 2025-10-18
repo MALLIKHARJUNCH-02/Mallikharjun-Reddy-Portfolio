@@ -17,11 +17,12 @@ const About = () => {
           About Me
         </motion.h2>
         <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          I am <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>,
-          a passionate Full Stack Developer who enjoys learning new things and
-          building modern, responsive applications. My strengths are{" "}
-          <span className="text-cyan-400">multitasking</span> and being a{" "}
-          <span className="text-cyan-400">quick learner</span>.
+          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a
+          passionate Full Stack Developer who loves learning new technologies and
+          building modern, responsive web applications. Known for being a
+          <span className="text-cyan-400">quick learner</span> and
+          <span className="text-cyan-400">highly adaptable</span>, I thrive on turning
+          ideas into functional, user-centric software solutions.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 mt-10">
