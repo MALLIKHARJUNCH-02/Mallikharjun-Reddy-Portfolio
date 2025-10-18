@@ -20,8 +20,8 @@ const About = () => {
           I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a
           passionate Full Stack Developer who loves learning new technologies and
           building modern, responsive web applications. Known for being a
-          <span className="text-cyan-400">quick learner</span> and
-          <span className="text-cyan-400">highly adaptable</span>, I thrive on turning
+          <span className="text-cyan-400"> quick learner</span> and
+          <span className="text-cyan-400"> highly adaptable</span>, I thrive on turning
           ideas into functional, user-centric software solutions.
         </p>
 
