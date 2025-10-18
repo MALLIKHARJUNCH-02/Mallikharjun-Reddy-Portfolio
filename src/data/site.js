@@ -48,10 +48,15 @@ const siteData = {
 
   certifications: [
     {
-      title: "Tata - GenAI Powered Data Analytics Job Simulation",
-      issuer: "Forage",
-      year: "Aug 2025"
+      title: "IBM - Full Stack Software Developer",
+      issuer: "IBM",
+      year: "Oct 2025"
     },
+    // {
+    //   title: "Tata - GenAI Powered Data Analytics Job Simulation",
+    //   issuer: "Forage",
+    //   year: "Aug 2025"
+    // },
     {
       title: "The Complete Full-Stack Web Development Bootcamp",
       issuer: "Udemy",
@@ -72,11 +77,11 @@ const siteData = {
       issuer: "Microsoft ",
       year: "Jun 2024"
     },
-    {
-      title: "Participant: Gesture Controlled Robot Workshop (JNTU Kakinada)",
-      issuer: "JNTUK ",
-      year: "Mar 2023"
-    },
+    // {
+    //   title: "Participant: Gesture Controlled Robot Workshop (JNTU Kakinada)",
+    //   issuer: "JNTUK ",
+    //   year: "Mar 2023"
+    // },
     {
       title: "Soft Skills Course (The Hindu Group, Step by Hindu)",
       issuer: "The Hindu",
