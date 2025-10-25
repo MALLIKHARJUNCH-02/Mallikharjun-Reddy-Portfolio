@@ -153,7 +153,7 @@ const siteData = {
     email: "mkreddychilukuri075@gmail.com",
     phone: "+91 7036513724",
     linkedin: "https://www.linkedin.com/in/mallikharjun-reddy-chilukuri-754b92241",
-    github: "https://github.com/MALLIKHARJUNCHILUKURI-02"
+    github: "https://github.com/MALLIKHARJUNCH-02"
   }
 };
 

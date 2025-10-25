@@ -3,10 +3,12 @@ import siteData from "../data/site";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+
 const Contact = () => {
   const ref = useRef(null);
-   const isInView = useInView(ref, { once: true });
-  
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section id="contact" ref={ref} className="py-16 bg-gray-950">
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -27,9 +29,12 @@ const Contact = () => {
         <div className="space-y-2">
           <p><a href={`mailto:${siteData.contact.email}`} className="text-blue-600 dark:text-blue-400">{siteData.contact.email}</a></p>
           <p>{siteData.contact.phone}</p>
-          <p><a href={siteData.contact.linkedin} target="_blank" className="text-blue-600 dark:text-blue-400">LinkedIn</a></p>
-          <p><a href={siteData.contact.github} target="_blank" className="text-blue-600 dark:text-blue-400">GitHub</a></p>
+          <div className="d-flex justify-center">
+          <p><a href={siteData.contact.linkedin} target="_blank" className="text-blue-600 dark:text-blue-400"><FaLinkedin className="inline mr-2 text-3xl" /></a></p>
+          <p><a href={siteData.contact.github} target="_blank" className="text-blue-600 dark:text-blue-400"><FaGithub className="inline mr-2 text-3xl" /></a></p>
+          </div>
         </div>
+
       </div>
     </section>
   );

@@ -9,6 +9,8 @@ import Certifications from "./sections/Certifications";
 import Internships from "./sections/Internships";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function App(){
   return (
