@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 const Hero = () => {
-     const ref = useRef(null);
-   const isInView = useInView(ref, { once: true });
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
     return (
         <div className="pt-20" ref={ref}>
             <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white px-6">
@@ -14,7 +14,7 @@ const Hero = () => {
 
                     <motion.h1
                         initial={{ opacity: 0, y: -30 }}
-                       animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
                         className="text-4xl md:text-6xl font-bold"
                     >
@@ -61,7 +61,8 @@ const Hero = () => {
 
                     <motion.img
                         src="/profile.jpg"
-                        alt="Profile"
+                        alt="Profile image Of Mallikharjun Reddy Chilukuri"
+                        title="Mallikharjun Reddy Chilukuri"
                         initial={{ opacity: 0, y: -30, scale: 0.1 }}
                         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                         transition={{ duration: 0.6 }}
