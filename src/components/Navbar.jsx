@@ -21,7 +21,9 @@ export default function Navbar() {
         <a href="/" className="font-bold text-lg text-indigo-600">
           Mallikharjun
         </a>
-        <div className="hidden md:flex items-center gap-6">
+
+        {/* Desktop menu (visible only on screens >= 970px) */}
+        <div className="hidden lg2:flex items-center gap-6"> {/* 👉 UPDATED (was md:flex) */}
           {links.map((link) => (
             <Link
               key={link.id}
@@ -38,14 +40,16 @@ export default function Navbar() {
             Download CV
           </Button>
         </div>
-        {/* Mobile menu toggle */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+
+        {/* Mobile menu toggle (visible only below 970px) */}
+        <button className="lg2:hidden" onClick={() => setOpen(!open)}> {/* 👉 UPDATED (was md:hidden) */}
           <span className="material-icons">{open ? "close" : "menu"}</span>
         </button>
       </div>
 
+      {/* Mobile menu (only appears when open below 970px) */}
       {open && (
-        <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4">
+        <div className="lg2:hidden bg-white shadow-lg px-6 py-4 space-y-4"> {/* 👉 UPDATED (was md:hidden) */}
           {links.map((link) => (
             <Link
               key={link.id}

@@ -15,6 +15,9 @@ export default {
       boxShadow: {
         glow: "0 0 0 2px rgba(59,130,246,.35), 0 8px 30px rgba(2,6,23,.55)",
       },
+      screens: {
+        lg2: "970px",
+      },
     },
   },
   plugins: [],
