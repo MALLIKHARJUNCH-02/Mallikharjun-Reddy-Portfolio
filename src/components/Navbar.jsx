@@ -37,7 +37,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Button href="/Mallikharjun_Resume.pdf" download>
-            Download CV
+           📄 Download Resume
           </Button>
         </div>
 
@@ -64,7 +64,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Button href="/assets/Mallikharjun_Resume.pdf" download>
-            Download CV
+            📄 Download Resume
           </Button>
         </div>
       )}

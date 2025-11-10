@@ -42,7 +42,7 @@ const Hero = () => {
                             download
                             className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-medium shadow-lg"
                         >
-                           Download Resume
+                           📄 Download Resume
                         </motion.a>
                         <motion.a
                             initial={{ opacity: 0, y: -30, scale: 0.9 }}
