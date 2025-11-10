@@ -27,11 +27,14 @@ const Contact = () => {
           Feel free to reach out for opportunities or collaborations.
         </motion.p>
         <div className="space-y-2">
-          <p><a href={`mailto:${siteData.contact.email}`} className="text-blue-600 dark:text-blue-400">{siteData.contact.email}</a></p>
+
           <p>{siteData.contact.phone}</p>
+
           <div className="d-flex justify-center">
-          <p><a href={siteData.contact.linkedin} target="_blank" className="text-blue-600 dark:text-blue-400"><FaLinkedin className="inline mr-2 text-3xl" /></a></p>
-          <p><a href={siteData.contact.github} target="_blank" className="text-blue-600 dark:text-blue-400"><FaGithub className="inline mr-2 text-3xl" /></a></p>
+            <p><a href={`mailto:${siteData.contact.email}`} className="text-blue-600 dark:text-blue-400"><FaEnvelope className="inline mr-2 text-3xl" /></a></p>
+            <p><a href={siteData.contact.linkedin} target="_blank" className="text-blue-600 dark:text-blue-400"><FaLinkedin className="inline mr-2 text-3xl" /></a></p>
+            <p><a href={siteData.contact.github} target="_blank" className="text-blue-600 dark:text-blue-400"><FaGithub className="inline mr-2 text-3xl" /></a></p>
+            {/* <p><a href={`mailto:${siteData.contact.zohoemail}`} className="text-blue-600 dark:text-blue-400"><FaEnvelope className="inline text-3xl" /> <span className="fw-bold">Zoho Mail</span></a></p> */}
           </div>
         </div>
 

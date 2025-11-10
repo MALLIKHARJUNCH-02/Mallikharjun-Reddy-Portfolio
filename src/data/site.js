@@ -151,6 +151,7 @@ const siteData = {
 
   contact: {
     email: "mkreddychilukuri075@gmail.com",
+    zohoemail: "mallikharjunreddy@zohomail.in",
     phone: "+91 7036513724",
     linkedin: "https://www.linkedin.com/in/mallikharjun-reddy-chilukuri-754b92241",
     github: "https://github.com/MALLIKHARJUNCH-02"
