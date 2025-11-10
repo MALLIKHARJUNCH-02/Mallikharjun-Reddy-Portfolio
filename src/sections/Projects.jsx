@@ -28,7 +28,7 @@ const Projects = () => {
 
                             <button type="button" className="m-4 btn btn-outline-info"><a href={project.link} target="_blank" rel="noopener noreferrer"
                                 className="inline-block hover:underline">
-                                View Project
+                                📦 Source Code
                             </a></button>
                             {project.livelink && (
                                
@@ -39,7 +39,7 @@ const Projects = () => {
                                     rel="noopener noreferrer"
                                     className="inline-block hover:underline"
                                 >
-                                    View live
+                                    🌐 Live Demo
                                 </a></button>
                             )}
 
