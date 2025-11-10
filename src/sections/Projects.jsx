@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 const Projects = () => {
-     const ref = useRef(null);
-   const isInView = useInView(ref, { once: true });
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
     return (
         <section id="projects" ref={ref} className="py-16 bg-gray-950">
             <div className="max-w-6xl mx-auto px-6">
@@ -20,24 +20,27 @@ const Projects = () => {
                     {siteData.projects.map((project, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                             animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6 }}
                             key={index} className="p-6 rounded-2xl shadow-md bg-gray-800 dark:bg-gray-800">
                             <h3 className="text-xl font-semibold text-gray-200">{project.title}</h3>
                             <p className="mt-2 text-gray-300 dark:text-gray-300">{project.description}</p>
-                            <a href={project.link} target="_blank" rel="noopener noreferrer"
-                                className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline">
-                                View Project →
-                            </a>
+
+                            <button type="button" className="m-4 btn btn-outline-info"><a href={project.link} target="_blank" rel="noopener noreferrer"
+                                className="inline-block hover:underline">
+                                View Project
+                            </a></button>
                             {project.livelink && (
-                                <a
+                               
+
+                                <button type="button" className="m-4 btn btn-outline-info"><a
                                     href={project.livelink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-block m-4 text-blue-600 dark:text-blue-400 hover:underline"
+                                    className="inline-block hover:underline"
                                 >
-                                    View live →
-                                </a>
+                                    View live
+                                </a></button>
                             )}
 
                         </motion.div>
