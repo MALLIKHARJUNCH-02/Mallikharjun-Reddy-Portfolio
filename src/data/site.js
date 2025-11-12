@@ -105,10 +105,33 @@ const siteData = {
     {
       role: "Internet of Things (IoT) Internship",
       company: "SRC e-Solutions, Vijayawada",
-      // duration: "1 Month",
+      duration: "1 Month",
       // description: "Worked on building and optimizing full-stack applications."
     }
   ],
+
+  // experience: [
+  //   {
+  //     role: "Full Stack Intern",
+  //     company: "TechNova Solutions",
+  //     type:"Full Time",
+  //     fromMonth: "Apr",
+  //     fromYear: "2024",
+  //     toMonth: "Present",
+  //     toYear: "",
+  //     description: "Developed scalable front-end features and REST APIs using MERN stack.",
+  //   },
+  //    {
+  //     role: "Web Developer",
+  //     company: "Unified Mentor",
+  //     type: "Contract",
+  //     fromMonth: "Jan",
+  //     fromYear: "2024",
+  //     toMonth: "Mar",
+  //     toYear: "2024",
+  //     description: "Worked on building and optimizing full-stack web applications.",
+  //   },
+  // ],
 
   projects: [
     {

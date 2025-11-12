@@ -5,10 +5,10 @@ import Button from "./ui/Button";
 const links = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "internships", label: "Internships" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
-  { id: "internships", label: "Internships" },
-  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 
