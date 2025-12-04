@@ -21,7 +21,7 @@ const Education = () => {
                         initial={{ opacity: 0, y: 30 }}
                        animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800">
+                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 border-start border-info">
                         <h3 className="text-xl font-semibold text-gray-200">{edu.degree}</h3>
                         <p className="text-gray-300 dark:text-gray-300">{edu.institution}</p>
                         <p className="text-sm text-gray-400">{edu.year}</p>

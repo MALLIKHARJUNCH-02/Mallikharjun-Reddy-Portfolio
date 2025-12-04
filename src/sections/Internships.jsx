@@ -23,7 +23,7 @@ const Internships = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6}}
-            className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 dark:bg-gray-800"
+            className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 dark:bg-gray-800 border-start border-info"
           >
             <h3 className="text-xl font-semibold text-gray-200">{intern.role}</h3>
             <p className="text-gray-300">{intern.company}</p>

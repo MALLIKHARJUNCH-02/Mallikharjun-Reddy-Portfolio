@@ -24,7 +24,7 @@ const Certifications = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-4 rounded-xl shadow-md bg-gray-800"
+              className="p-4 rounded-xl shadow-md bg-gray-800 border-start border-info"
             >
               <h3 className="text-lg font-semibold text-gray-200">{cert.title}</h3>
               <p className="text-gray-400">
