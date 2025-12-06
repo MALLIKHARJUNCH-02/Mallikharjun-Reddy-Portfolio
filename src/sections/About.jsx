@@ -30,7 +30,7 @@ const About = () => {
             initial={{ opacity: 0, y: -30, scale: 0.7 }}
             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 0.6 }}
-            className="bg-gray-900 p-6 rounded-2xl shadow-lg border-start border-info"
+            className="bg-gray-900 p-6 rounded-2xl shadow-lg border-start border-1 border-info shadow"
           >
             <h3 className="text-xl font-semibold text-cyan-300 mb-3">
               Hobbies & Interests
@@ -71,7 +71,7 @@ const About = () => {
             initial={{ opacity: 0, y: -30, scale: 0.7 }}
             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 0.6 }}
-            className="bg-gray-900 p-6 rounded-2xl shadow-lg border-start border-info"
+            className="bg-gray-900 p-6 rounded-2xl shadow-lg border-start border-1 border-info shadow"
           >
             <h3 className="text-xl font-semibold text-cyan-300 mb-3">
               Strengths
