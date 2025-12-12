@@ -16,6 +16,7 @@ const siteData = {
     "CSS",
     "Bootstrap",
     "EJS",
+    "UI/UX (Wireframing, Prototyping)",
     "JWT Authentication",
     "REST APIs",
     "Performance Optimization",
@@ -47,6 +48,11 @@ const siteData = {
   ],
 
   certifications: [
+    {
+      title: "Google UX Design Professional Certificate",
+      issuer: "Google",
+      year: "Dec 2025"
+    },
     {
       title: "IBM - Full Stack Software Developer",
       issuer: "IBM",
@@ -82,11 +88,11 @@ const siteData = {
     //   issuer: "JNTUK ",
     //   year: "Mar 2023"
     // },
-    {
-      title: "Soft Skills Course (The Hindu Group, Step by Hindu)",
-      issuer: "The Hindu",
-      year: "Mar 2023"
-    }
+    // {
+    //   title: "Soft Skills Course (The Hindu Group, Step by Hindu)",
+    //   issuer: "The Hindu",
+    //   year: "Mar 2023"
+    // }
   ],
 
   internships: [
