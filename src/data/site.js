@@ -1,9 +1,10 @@
 // data/site.js
 const siteData = {
   name: "Chilukuri Mallikharjun Reddy",
-  designation: "Aspiring Full Stack Developer | Team Player",
+  designation: "Full Stack Web Developer",
+  tagLine:"Building clean, user-focused web experiences",
   resume: "/resume.pdf",
-  about: `Enthusiastic Full Stack Developer with practical experience in designing and developing dynamic, responsive web applications using modern technologies. Adept at both frontend and backend development, with a strong focus on building scalable, user-friendly, and high-performance software solutions.`,
+  about: `Focused on scalability, performance, and thoughtful UI/UX in modern web applications.`,
 
   skills: [
     "JavaScript (ES6+)",

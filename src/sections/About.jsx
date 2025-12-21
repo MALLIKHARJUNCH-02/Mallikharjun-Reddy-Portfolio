@@ -6,7 +6,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" ref={ref} className="py-16 bg-gray-950 text-white px-6">
+    <section id="about" ref={ref} className="py-16 bg-gray-950 text-white px-6 justify-center">
       <div className="max-w-5xl mx-auto text-center space-y-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -17,12 +17,9 @@ const About = () => {
           About Me
         </motion.h2>
         <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a
-          passionate Full Stack Developer who loves learning new technologies and
-          building modern, responsive web applications. Known for being a
-          <span className="text-cyan-400"> quick learner</span> and
-          <span className="text-cyan-400"> highly adaptable</span>, I thrive on turning
-          ideas into functional, user-centric software solutions.
+          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a Full Stack Developer
+          who enjoys building modern, responsive web applications and continuously learning new
+          technologies. I focus on turning ideas into clean, scalable, and user-centric solutions.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 mt-10">
@@ -41,7 +38,7 @@ const About = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                ⚡ Creating mini projects
+                ⚡ Building mini projects
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 30 }}
@@ -62,7 +59,7 @@ const About = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                🎨 Editing
+                🎨 Creative editing
               </motion.li>
             </ul>
           </motion.div>
@@ -89,22 +86,58 @@ const About = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                ✅ Multitasking
+                ✅ Problem-solving mindset
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                ✅ Strong problem-solving skills
+                ✅ Adaptable & multitasking
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                ✅ Passion for continuous learning
+                ✅ Continuous learning focus
               </motion.li>
+            </ul>
+          </motion.div>
+
+
+          <motion.div
+            initial={{ opacity: 0, y: -30, scale: 0.7 }}
+            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ duration: 0.6 }}
+            className="bg-gray-900 p-6 rounded-2xl shadow-lg border-start border-1 border-info shadow md:col-span-2 max-w-xl mx-auto"
+          >
+            <h3 className="text-xl font-semibold text-cyan-300 mb-3">
+              Currently Exploring
+            </h3>
+            <ul className="space-y-2 text-gray-400">
+              <motion.li
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+              >
+               🧠 UI/UX fundamentals & prototyping
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+              >
+              ⚡ React performance & component optimization
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+              >
+               🔧 Scalable backend patterns with Node.js
+              </motion.li>
+              
             </ul>
           </motion.div>
         </div>

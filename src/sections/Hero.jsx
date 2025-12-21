@@ -29,11 +29,27 @@ const Hero = () => {
                         className="text-2xl md:text-3xl font-semibold text-gray-300">
                         {siteData.designation}
                     </motion.h2>
-                    <p className="text-gray-400 max-w-xl">
-                        {siteData.about}
-                    </p>
+                    <motion.p
+                        initial={{ opacity: 0, y: -30, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                        transition={{ duration: 0.6 }}
+                        className="text-sm md:text-base font-medium text-gray-400 mt-1">
+                        {siteData.tagLine}
+                    </motion.p>
 
-                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <motion.p
+                        initial={{ opacity: 0, y: -30, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                        transition={{ duration: 0.6 }}
+                        className="text-sm md:text-base font-medium text-gray-400">
+                        {siteData.about}
+                    </motion.p>
+                    {/* <p className="text-sm md:text-base leading-relaxed text-gray-400 max-w-xl">
+                        {siteData.about}
+                    </p> */}
+
+
+                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-center">
                         <motion.a
                             initial={{ opacity: 0, y: -30, scale: 0.9 }}
                             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -42,7 +58,7 @@ const Hero = () => {
                             download
                             className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-medium shadow-lg"
                         >
-                           📄 Download Resume
+                            📄 Download Resume
                         </motion.a>
                         <motion.a
                             initial={{ opacity: 0, y: -30, scale: 0.9 }}
