@@ -17,9 +17,9 @@ const About = () => {
           About Me
         </motion.h2>
         <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a Full Stack Developer
-          who enjoys building modern, responsive web applications and continuously learning new
-          technologies. I focus on turning ideas into clean, scalable, and user-centric solutions.
+          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a passionate Full Stack Developer specializing in clean, scalable, and user-focused web applications. I enjoy solving problems through modern technologies like React.js, Node.js, and responsive design. I have practical experience in both front-end and back-end development and a strong foundation in UI/UX fundamentals, including wireframing and prototyping.
+
+I thrive on learning new tools, collaborating with teams, and building solutions that are both efficient and intuitive.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 mt-10">
