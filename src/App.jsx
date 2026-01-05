@@ -9,6 +9,7 @@ import Certifications from "./sections/Certifications";
 import Internships from "./sections/Internships";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import UxProjects from "./sections/UXProjects";
 // import Experience from "./sections/Experience";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -24,6 +25,7 @@ export default function App(){
         <About />
         <Skills />
         <Projects />
+        {/* <UxProjects/> */}
         <Internships />
         <Education />
         {/* <Experience/> */}

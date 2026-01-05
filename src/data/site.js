@@ -1,7 +1,7 @@
 // data/site.js
 const siteData = {
   name: "Chilukuri Mallikharjun Reddy",
-  designation: "Full Stack Web Developer",
+  designation: "Full Stack Web Developer | UX-Focused Product Designer",
   tagLine:"Building clean, user-focused web experiences",
   resume: "/resume.pdf",
   about: `Focused on scalability, performance, and thoughtful UI/UX in modern web applications.`,
@@ -141,6 +141,12 @@ const siteData = {
   // ],
 
   projects: [
+    {
+      title: "Learnosphere – EdTech Platform (UI/UX Case Study)",
+      description: "A UX-focused EdTech design case study exploring habit-based learning through calm interfaces, StudyLoop calendars, and reflection-driven insights.",
+      link: "https://github.com/MALLIKHARJUNCH-02/LearnoSphere.git",
+      livelink: "https://www.figma.com/proto/E1jINB5D1LBXmfwWlmm9cq/LearnoSphere-Design?node-id=0-2626&p=f&t=2oESIU4P9DKvLPGz-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=0%3A2227   "
+    },
     {
       title: "SpiceSprint – Full Stack Grocery Delivery App (In Progress)",
       description: "Full-stack grocery delivery app using React, Node.js, Express, MongoDB, and Bootstrap with secure authentication, responsive UI, and deployed backend on Render and frontend on Vercel; actively developing features like order management and delivery tracking.",
