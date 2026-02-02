@@ -16,6 +16,10 @@ export default function Footer() {
         <a href={`mailto:${siteData.contact.email}`} className="hover:text-indigo-600">
           Email
         </a>
+
+        <a href="https://www.behance.net/mallikhreddy1" className="hover:text-indigo-600" target="blank">
+          Behance
+        </a>
       </div>
     </footer>
   );

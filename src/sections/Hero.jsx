@@ -70,6 +70,20 @@ const Hero = () => {
                             Contact Me
                         </motion.a>
                     </div>
+
+                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-center">
+                        <motion.a
+                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
+                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                            transition={{ duration: 0.6 }}
+                            href="https://www.behance.net/mallikhreddy1"
+                            download
+                            className="bg-blue-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-medium shadow-lg"
+                            target="blank"
+                        >
+                            Behance Profile
+                        </motion.a>
+                    </div>
                 </div>
 
                 {/* Right Content (Image) */}
