@@ -16,6 +16,7 @@ const siteData = {
     "HTML",
     "CSS",
     "Bootstrap",
+    "TailwindCSS",
     "EJS",
     "UI/UX (Wireframing, Prototyping)",
     "JWT Authentication",
