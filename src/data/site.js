@@ -2,7 +2,7 @@
 const siteData = {
   name: "Chilukuri Mallikharjun Reddy",
   designation: "Full Stack Web Developer | UX-Focused Product Designer",
-  tagLine:"Building clean, user-focused web experiences",
+  tagLine: "Building clean, user-focused web experiences",
   resume: "/resume.pdf",
   about: `Focused on scalability, performance, and thoughtful UI/UX in modern web applications.`,
 
@@ -99,23 +99,29 @@ const siteData = {
 
   internships: [
     {
+      "role": "UI/UX Intern",
+      "company": "XAVIRGIN (OPC) PRIVATE LIMITED",
+      "startDate": "2026-03-01",
+      "endDate": "present",
+      "description": "Designing and improving user interfaces for internal company products, focusing on usability, layout structure, and user experience."
+    },
+    {
       role: "Web Development Intern",
       company: "Unified Mentor",
-      duration: "1 Month",
+      startDate: "2025-02-15",
+      endDate: "2025-3-15",
       description: "Worked on building and optimizing full-stack applications."
     },
     {
       role: "Networking Essentials & Packet Tracer",
       company: "CISCO-AICTE Virtual Internship (2023)",
-      // duration: "1 Month",
-      // description: "Worked on building and optimizing full-stack applications."
+      description: "Completed hands-on networking labs and Packet Tracer simulations."
     },
-    {
-      role: "Internet of Things (IoT) Internship",
-      company: "SRC e-Solutions, Vijayawada",
-      duration: "1 Month",
-      // description: "Worked on building and optimizing full-stack applications."
-    }
+    // {
+    //   role: "Internet of Things (IoT) Internship",
+    //   company: "SRC e-Solutions, Vijayawada",
+    //   description: "Built IoT prototypes and explored sensor integration with cloud platforms."
+    // }
   ],
 
   // experience: [
