@@ -3,7 +3,7 @@ import siteData from "../data/site";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -28,7 +28,15 @@ const Contact = () => {
         </motion.p>
         <div className="space-y-2">
 
-          <p>{siteData.contact.phone}</p>
+          {/* <p>{siteData.contact.phone}</p> */}
+
+          <p>
+            <a href="tel:+917036513724">{siteData.contact.primaryPhone}</a>
+          </p>
+
+          <p>
+            <a href="tel:+917799153109">+91 7799153109</a>
+          </p>
 
           <div className="d-flex justify-center">
             <p><a href={`mailto:${siteData.contact.email}`} className="text-blue-600 dark:text-blue-400"><FaEnvelope className="inline mr-2 text-3xl" /></a></p>
