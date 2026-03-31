@@ -39,6 +39,7 @@ const siteData = {
     {
       degree: "B.Tech in Electronics and Communication Engineering",
       institution: "Lakireddy Balireddy College of Engineering",
+      affiliated: "Jawaharlal Nehru Technological University Kakinada (JNTUK)",
       year: "2020 - 2024",
       description: "Graduated with strong foundation in electronics, programming, and web development."
     },
