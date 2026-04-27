@@ -96,7 +96,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: -30, scale: 0.1 }}
                         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-cyan-500"
+                        className="w-80 h-80 object-cover rounded-full shadow-2xl border-4 border-cyan-500"
                     />
 
                 </div>
