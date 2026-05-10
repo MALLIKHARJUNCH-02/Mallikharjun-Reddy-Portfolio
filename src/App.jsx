@@ -13,6 +13,7 @@ import UxProjects from "./sections/UXProjects";
 // import Experience from "./sections/Experience";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App(){
   return (
@@ -31,6 +32,8 @@ export default function App(){
         {/* <Experience/> */}
         <Certifications />
         <Contact />
+
+        <Analytics/>
       </main>
       <Footer />
     </>

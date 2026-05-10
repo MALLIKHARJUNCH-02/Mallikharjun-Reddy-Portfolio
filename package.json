@@ -11,6 +11,7 @@
     "tailwind": "tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "clsx": "^2.1.1",
