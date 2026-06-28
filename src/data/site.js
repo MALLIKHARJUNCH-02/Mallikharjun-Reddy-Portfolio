@@ -102,8 +102,8 @@ const siteData = {
     {
       "role": "UI/UX Intern",
       "company": "XAVIRGIN (OPC) PRIVATE LIMITED",
-      "startDate": "2026-03-01",
-      "endDate": "present",
+      "startDate": "2026-03-07",
+      "endDate": "2026-06-28",
       "description": "Designing and improving user interfaces for internal company products, focusing on usability, layout structure, and user experience."
     },
     {
