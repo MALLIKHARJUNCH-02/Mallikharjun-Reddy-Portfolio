@@ -56,7 +56,7 @@ const Hero = () => {
                             transition={{ duration: 0.6 }}
                             href="/Mallikharjun_Resume.pdf"
                             download
-                            className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-medium shadow-lg"
+                            className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-md font-medium shadow-lg"
                         >
                             📄 Download Resume
                         </motion.a>
@@ -65,7 +65,7 @@ const Hero = () => {
                             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                             transition={{ duration: 0.6 }}
                             href="#contact"
-                            className="bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-3 rounded-xl font-medium"
+                            className="bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-3 rounded-md font-medium"
                         >
                             Contact Me
                         </motion.a>
@@ -78,10 +78,22 @@ const Hero = () => {
                             transition={{ duration: 0.6 }}
                             href="https://www.behance.net/mallikhreddy1"
                             download
-                            className="bg-blue-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-medium shadow-lg"
+                            className="bg-blue-500 hover:bg-cyan-600 px-6 py-3 rounded-md font-medium shadow-lg"
                             target="blank"
                         >
                             Behance Profile
+                        </motion.a>
+
+                        <motion.a
+                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
+                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                            transition={{ duration: 0.6 }}
+                            href="https://link-vault-two-mauve.vercel.app/"
+                            download
+                            className="bg-green-500 text-black hover:bg-blue-600 px-6 py-3 rounded-md font-medium shadow-lg"
+                            target="blank"
+                        >
+                            LinkVault
                         </motion.a>
                     </div>
                 </div>
