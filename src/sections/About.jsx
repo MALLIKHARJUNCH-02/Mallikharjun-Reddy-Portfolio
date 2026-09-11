@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import siteData from "../data/site";
 
 const About = () => {
   const ref = useRef(null);
@@ -17,10 +18,7 @@ const About = () => {
           About Me
         </motion.h2>
         <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          I’m <span className="text-cyan-400">Chilukuri Mallikharjun Reddy</span>, a passionate Full Stack Developer specializing in clean, scalable, and user-focused web applications. I enjoy solving problems through modern technologies like React.js, Node.js, and responsive design. I have practical experience in both front-end and back-end development and a strong foundation in UI/UX fundamentals, including wireframing and prototyping.
-
-I thrive on learning new tools, collaborating with teams, and building solutions that are both efficient and intuitive.
-        </p>
+          I’m <span className="text-cyan-400">{siteData.name}</span>, {siteData.aboutme}</p>
 
         <div className="grid md:grid-cols-2 gap-8 mt-10">
           <motion.div
@@ -121,21 +119,21 @@ I thrive on learning new tools, collaborating with teams, and building solutions
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-               🧠 UI/UX fundamentals & prototyping
+               ☕ Java, Spring Boot & Spring Data JPA Development
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-              ⚡ React performance & component optimization
+              ⚡ React.js & REST API Development
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-               🔧 Scalable backend patterns with Node.js
+               🧠 UI/UX Design, Design Thinking & Prototyping
               </motion.li>
               
             </ul>

@@ -1,38 +1,66 @@
 // data/site.js
 const siteData = {
   name: "Chilukuri Mallikharjun Reddy",
-  designation: "Full Stack Web Developer | UX-Focused Product Designer",
-  tagLine: "Building clean, user-focused web experiences",
+  designation: "Full Stack Developer | Java & MERN | UI/UX-Driven",
+  tagLine: "Turning ideas into scalable web applications and intuitive digital experiences",
   resume: "/resume.pdf",
-  about: `Focused on scalability, performance, and thoughtful UI/UX in modern web applications.`,
+  about: `Building scalable, high-performance web applications with Java, Spring Boot, React.js, and thoughtful UI/UX.`,
+  aboutme: `a passionate Full Stack Developer focused on building clean, scalable, and user-centric web applications.
+I work across both Java and JavaScript ecosystems, with hands - on experience in Java, Spring Boot, Spring Data JPA, 
+REST APIs, React.js, Node.js, and Express.js, supported by databases such as MySQL, PostgreSQL, and MongoDB.
+Alongside development, I have a strong interest in UI/ UX design, with experience in design thinking, user research, 
+wireframing, prototyping, and creating intuitive digital experiences.I enjoy bridging the gap between design and development
+ to build products that are not only functional and efficient but also easy to use. I’m continuously strengthening my skills
+  in full - stack development, SQL, Data Structures & Algorithms, and software engineering practices.I enjoy solving 
+  problems, exploring new technologies, collaborating with teams, and turning ideas into meaningful digital products.`,
 
   skills: [
+    // ⭐ Java Full Stack
+    "Java",
+    "Spring Boot",
+    "Spring Data JPA",
+    "REST APIs",
+    "SQL",
+    "MySQL",
+
+    // ⭐ Frontend
     "JavaScript (ES6+)",
     "React.js",
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "Tailwind CSS",
+
+    // ⭐ Backend / MERN
     "Node.js",
     "Express.js",
-    "MongoDB Atlas",
+    "MongoDB",
     "PostgreSQL",
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "TailwindCSS",
-    "EJS",
-    "UI/UX (Wireframing, Prototyping)",
+
+    // ⭐ API & Security
     "JWT Authentication",
-    "REST APIs",
-    "Performance Optimization",
-    "SEO Basics",
-    "Agile SDLC",
+    "Swagger / OpenAPI",
+    "Postman",
+
+    // ⭐ UI/UX
+    "UI/UX Design",
+    "Wireframing",
+    "Prototyping",
+    "Figma",
+
+    // ⭐ Development Tools
     "Git",
     "GitHub",
-    "Postman",
     "VS Code",
-    "Figma",
-    "Java",
-    "C",
+
+    // ⭐ Programming Languages
     "C++",
-    "Python"
+    "C",
+
+    // ⭐ Development Practices
+    "Agile SDLC",
+    "Performance Optimization",
+    "SEO Basics"
   ],
 
   education: [
