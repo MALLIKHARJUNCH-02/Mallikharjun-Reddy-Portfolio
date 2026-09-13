@@ -1,79 +1,66 @@
-import React, { useRef } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import siteData from "../data/site";
-import { motion, useInView } from "framer-motion";
+import Section from "../components/ui/Section";
+import { fadeUp, stagger, viewportOnce } from "../lib/motion";
 
-const Internships = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+const getDuration = (startDate, endDate) => {
+  if (!startDate || !endDate) return null;
 
-  const getDuration = (startDate, endDate) => {
-    if (!startDate || !endDate) return null;
+  const start = new Date(startDate);
+  const end = endDate === "present" ? new Date() : new Date(endDate);
 
-    const start = new Date(startDate);
-    const end = endDate === "present" ? new Date() : new Date(endDate);
+  let months = end.getMonth() - start.getMonth() + 12 * (end.getFullYear() - start.getFullYear());
 
-    let months =
-      end.getMonth() -
-      start.getMonth() +
-      12 * (end.getFullYear() - start.getFullYear());
+  if (months <= 0) months = 1;
 
-    if (months <= 0) months = 1;
+  return `${months} month${months > 1 ? "s" : ""}`;
+};
 
-    return `${months} month${months > 1 ? "s" : ""}`;
-  };
+const formatDate = (date) => {
+  if (!date) return null;
+  if (date === "present") return "Present";
 
-  const formatDate = (date) => {
-    if (!date) return null;
-    if (date === "present") return "Present";
+  const options = { year: "numeric", month: "short" };
+  return new Date(date).toLocaleDateString("en-US", options);
+};
 
-    const options = { year: "numeric", month: "short" };
-    return new Date(date).toLocaleDateString("en-US", options);
-  };
-
+export default function Internships() {
   return (
-    <section id="internships" ref={ref} className="py-16 bg-gray-900">
-      <div className="max-w-5xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-center mb-10 text-white"
-        >
-          Internships
-        </motion.h2>
-
+    <Section id="internships" title="Experience" dim>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={stagger(0.1)}
+        className="max-w-3xl"
+      >
         {siteData.internships.map((intern, index) => {
           const start = formatDate(intern.startDate);
           const end = formatDate(intern.endDate);
           const duration = getDuration(intern.startDate, intern.endDate);
+          const isLast = index === siteData.internships.length - 1;
 
           return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 border-1 border-info"
-            >
-              <h3 className="text-xl font-semibold text-gray-100">
-                {intern.role}
-              </h3>
+            <motion.div key={intern.company} variants={fadeUp} className="relative pl-8 pb-10 last:pb-0">
+              {!isLast && <span className="absolute left-[5px] top-3 bottom-0 w-px bg-line" aria-hidden="true" />}
+              <span className="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-accent" aria-hidden="true" />
 
-              <p className="text-gray-300">{intern.company}</p>
+              <h3 className="text-lg font-medium text-ink">{intern.role}</h3>
+              <p className="text-sm text-ink-soft mt-0.5">{intern.company}</p>
 
               {start && end && (
-                <p className="text-sm text-gray-400 mt-1">
-                  {start} – {end} • <span className="text-blue-400">{duration}</span>
+                <p className="text-xs text-ink-faint mt-1.5">
+                  {start} – {end}
+                  {duration && <span className="text-accent"> ({duration})</span>}
                 </p>
               )}
 
-              <p className="mt-3 text-gray-300">{intern.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{intern.description}</p>
             </motion.div>
           );
         })}
-      </div>
-    </section>
+      </motion.div>
+    </Section>
   );
-};
-
-export default Internships;
+}

@@ -2,8 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accessible focus styles
-:focus-visible { outline: 2px solid theme('colors.brand.500'); outline-offset: 3px; }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-/***** Animations helpers *****/
-/* .reduced-motion * { animation: none !important; transition: none !important; } */
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "General Sans", "Inter", sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: theme("colors.accent-soft");
+    color: theme("colors.accent-ink");
+  }
+
+  /* Visible focus states everywhere, keyboard-first */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid theme("colors.accent");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-content mx-auto px-6 sm:px-10 lg:px-16;
+  }
+
+  .section-heading {
+    @apply font-display text-[2rem] sm:text-[2.35rem] font-semibold text-ink leading-tight;
+  }
+}

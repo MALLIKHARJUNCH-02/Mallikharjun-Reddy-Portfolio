@@ -1,41 +1,46 @@
-// import SkipLink from "./components/SkipLink";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
+import Internships from "./sections/Internships";
 import Education from "./sections/Education";
 import Certifications from "./sections/Certifications";
-import Internships from "./sections/Internships";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-import UxProjects from "./sections/UXProjects";
-// import Experience from "./sections/Experience";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import { Analytics } from "@vercel/analytics/react"
+import Resume from "./pages/Resume";
+import { Analytics } from "@vercel/analytics/react";
 
-export default function App(){
+function Home() {
   return (
     <>
-      {/* <SkipLink /> */}
-      <a id="main" className="sr-only" href="#"></a>
       <Navbar />
       <main>
         <Hero />
         <About />
         <Skills />
         <Projects />
-        {/* <UxProjects/> */}
         <Internships />
         <Education />
-        {/* <Experience/> */}
         <Certifications />
         <Contact />
-
-        <Analytics/>
       </main>
       <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <a id="main" className="sr-only" href="#">
+        Skip to content
+      </a>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Analytics />
     </>
   );
 }

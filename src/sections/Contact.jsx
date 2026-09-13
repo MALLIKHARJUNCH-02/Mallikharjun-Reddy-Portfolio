@@ -1,54 +1,56 @@
 import React from "react";
 import siteData from "../data/site";
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
+import Section from "../components/ui/Section";
+import Button from "../components/ui/Button";
 
-const Contact = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+const iconLinks = [
+  { icon: FaPhoneAlt, label: siteData.contact.primaryPhone, href: `tel:${siteData.contact.primaryPhone.replace(/\s+/g, "")}` },
+  { icon: FaEnvelope, label: "Email", href: `mailto:${siteData.contact.email}` },
+  { icon: FaLinkedin, label: "LinkedIn", href: siteData.contact.linkedin },
+  { icon: FaGithub, label: "GitHub", href: siteData.contact.github },
+];
 
+export default function Contact() {
   return (
-    <section id="contact" ref={ref} className="py-16 bg-gray-950">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-3xl font-bold mb-6 text-gray-100">
-          Contact Me
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 30, scale: 0.1 }}
-          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-gray-200 mb-4">
+    <Section id="contact" title="Contact">
+      <div className="max-w-2xl">
+        <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
           Feel free to reach out for opportunities or collaborations.
-        </motion.p>
-        <div className="space-y-2">
+        </p>
 
-          {/* <p>{siteData.contact.phone}</p> */}
-
-          <p>
-            <a href="tel:+917036513724">{siteData.contact.primaryPhone}</a>
-          </p>
-
-          <p>
-            <a href="tel:+917799153109">+91 7799153109</a>
-          </p>
-
-          <div className="d-flex justify-center">
-            <p><a href={`mailto:${siteData.contact.email}`} className="text-blue-600 dark:text-blue-400"><FaEnvelope className="inline mr-2 text-3xl" /></a></p>
-            <p><a href={siteData.contact.linkedin} target="_blank" className="text-blue-600 dark:text-blue-400"><FaLinkedin className="inline mr-2 text-3xl" /></a></p>
-            <p><a href={siteData.contact.github} target="_blank" className="text-blue-600 dark:text-blue-400"><FaGithub className="inline mr-2 text-3xl" /></a></p>
-            {/* <p><a href={`mailto:${siteData.contact.zohoemail}`} className="text-blue-600 dark:text-blue-400"><FaEnvelope className="inline text-3xl" /> <span className="fw-bold">Zoho Mail</span></a></p> */}
-          </div>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Button href={`mailto:${siteData.contact.email}`} variant="primary">
+            Email me
+          </Button>
+          <Button href={`tel:${siteData.contact.primaryPhone.replace(/\s+/g, "")}`} variant="outline">
+            {siteData.contact.primaryPhone}
+          </Button>
         </div>
 
+        <div className="mt-10 flex flex-wrap gap-6">
+          {iconLinks.map(({ icon: Icon, label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel="noreferrer"
+              aria-label={label}
+              className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors"
+            >
+              <Icon aria-hidden="true" />
+              {label}
+            </a>
+          ))}
+          <a
+            href={`tel:${siteData.contact.secondaryPhone.replace(/\s+/g, "")}`}
+            className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors"
+          >
+            <FaPhoneAlt aria-hidden="true" />
+            {siteData.contact.secondaryPhone}
+          </a>
+        </div>
       </div>
-    </section>
+    </Section>
   );
-};
-
-export default Contact;
+}
