@@ -60,9 +60,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button href="/Mallikharjun_Resume.pdf" download variant="outline" className="text-sm py-2">
+          <a
+            href="https://mallikharjun-resume.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border border-green-400 bg-white px-4 py-2 text-sm font-medium text-black transition-colors duration-200 hover:bg-green-50 hover:text-green-500 hover:border-black"
+          >
             Resume
-          </Button>
+          </a>
         </div>
 
         <button
