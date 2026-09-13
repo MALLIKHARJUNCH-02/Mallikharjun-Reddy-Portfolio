@@ -12,7 +12,7 @@ export default function Education() {
         whileInView="show"
         viewport={viewportOnce}
         variants={stagger(0.1)}
-        className="max-w-3xl divide-y divide-line"
+        className="max-w-3xl divide-y divide-line divide-gray-500"
       >
         {siteData.education.map((edu) => (
           <motion.div key={edu.degree} variants={fadeUp} className="py-6 first:pt-0 last:pb-0">

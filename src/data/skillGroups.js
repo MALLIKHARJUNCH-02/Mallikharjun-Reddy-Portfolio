@@ -4,7 +4,7 @@
 const skillGroups = [
   {
     label: "Languages",
-    match: ["Java", "C++", "C", "JavaScript (ES6+)", "SQL"],
+    match: ["Java", "C++", "C", "JavaScript (ES6+)", "SQL","Python"],
   },
   {
     label: "Frontend",

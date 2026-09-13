@@ -37,7 +37,7 @@ export default function About() {
   return (
     <Section id="about" title="About">
       <p className="text-base sm:text-lg leading-relaxed text-ink-soft max-w-2xl">
-        I’m <span className="text-ink font-medium">{siteData.name}</span>, {siteData.aboutme}
+        I’m <span className="text-ink text-blue-900 font-medium underline">{siteData.name}</span>, {siteData.aboutme}
       </p>
 
       <motion.div

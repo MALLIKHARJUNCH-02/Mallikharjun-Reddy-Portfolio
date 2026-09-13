@@ -1,3 +1,5 @@
+import { link } from "framer-motion/client";
+
 // data/site.js
 const siteData = {
   name: "Chilukuri Mallikharjun Reddy",
@@ -22,6 +24,7 @@ wireframing, prototyping, and creating intuitive digital experiences.I enjoy bri
     "REST APIs",
     "SQL",
     "MySQL",
+    "Python",
 
     // ⭐ Frontend
     "JavaScript (ES6+)",
@@ -84,12 +87,14 @@ wireframing, prototyping, and creating intuitive digital experiences.I enjoy bri
     {
       title: "Google UX Design Professional Certificate",
       issuer: "Google",
-      year: "Dec 2025"
+      year: "Dec 2025",
+      link: "https://link-vault-two-mauve.vercel.app/Google_UX_Design_Professional_Certificate.pdf"
     },
     {
       title: "IBM - Full Stack Software Developer",
       issuer: "IBM",
-      year: "Oct 2025"
+      year: "Oct 2025",
+      link: "https://link-vault-two-mauve.vercel.app/IBM_Full_Stack_Software_Developer.pdf"
     },
     // {
     //   title: "Tata - GenAI Powered Data Analytics Job Simulation",
@@ -99,33 +104,38 @@ wireframing, prototyping, and creating intuitive digital experiences.I enjoy bri
     {
       title: "The Complete Full-Stack Web Development Bootcamp",
       issuer: "Udemy",
-      year: "Mar 2025"
+      year: "Mar 2025",
+      link: "https://link-vault-two-mauve.vercel.app/TheCompleteFull-StackWebDevelopmentBootcamp.pdf"
     },
     {
       title: "Learn Programming with Java- An Interactive Way (Infosys Springboard)",
       issuer: "Infosys Springboard",
-      year: "Oct 2024"
+      year: "Oct 2024",
+      link: "https://link-vault-two-mauve.vercel.app/Learn_Programming_with_Java-An_Interactive.pdf"
     },
     {
       title: "Career Essentials in Generative AI by Microsoft and LinkedIn",
       issuer: "Microsoft ",
-      year: "Jul 2024"
+      year: "Jul 2024",
+      link: "https://link-vault-two-mauve.vercel.app/CareerEssentialsinGenerativeAIbyMicrosoftandLinkedIn.pdf"
     },
     {
       title: "Career Essentials in Software Development by Microsoft and Linkedln",
       issuer: "Microsoft ",
-      year: "Jun 2024"
+      year: "Jun 2024",
+      link: "https://link-vault-two-mauve.vercel.app/CareerEssentialsinSoftwareDevelopmentbyMicrosoftandLinkedIn.pdf"
     },
     // {
     //   title: "Participant: Gesture Controlled Robot Workshop (JNTU Kakinada)",
     //   issuer: "JNTUK ",
     //   year: "Mar 2023"
     // },
-    // {
-    //   title: "Soft Skills Course (The Hindu Group, Step by Hindu)",
-    //   issuer: "The Hindu",
-    //   year: "Mar 2023"
-    // }
+    {
+      title: "Soft Skills Course (The Hindu Group, Step by Hindu)",
+      issuer: "The Hindu",
+      year: "Mar 2023",
+      link: "https://link-vault-two-mauve.vercel.app/step_by_hindu.pdf"
+    }
   ],
 
   internships: [

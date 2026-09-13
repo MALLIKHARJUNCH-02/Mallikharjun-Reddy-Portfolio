@@ -3,20 +3,7 @@ import { motion } from "framer-motion";
 import siteData from "../data/site";
 import Section from "../components/ui/Section";
 import { fadeUp, stagger, viewportOnce } from "../lib/motion";
-
-function ArrowLink({ href, children }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent transition-colors"
-    >
-      {children}
-      <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5">›</span>
-    </a>
-  );
-}
+import ArrowLink from "../components/ui/ArrowLink";
 
 function ProjectCard({ project }) {
   return (
@@ -27,7 +14,7 @@ function ProjectCard({ project }) {
       <h3 className="text-lg font-medium text-ink leading-snug">{project.title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-ink-soft">{project.description}</p>
 
-      <div className="mt-6 flex items-center gap-5 pt-4 border-t border-line">
+      <div className="mt-6 flex items-center gap-5 pt-4 border-t border-gray-500">
         <ArrowLink href={project.link}>Source</ArrowLink>
         {project.livelink && <ArrowLink href={project.livelink}>Live demo</ArrowLink>}
       </div>

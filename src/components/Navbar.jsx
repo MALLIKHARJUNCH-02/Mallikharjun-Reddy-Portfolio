@@ -35,10 +35,14 @@ export default function Navbar() {
       <nav className="container-page flex items-center justify-between h-16">
         <a
           href="/"
-          className="flex items-center justify-center w-9 h-9 rounded-full border border-line-strong text-sm font-display font-semibold text-ink hover:border-accent hover:text-accent transition-colors"
+          className="flex items-center justify-center w-9 h-9 rounded-full border border-line-strong overflow-hidden hover:border-accent transition-colors"
           aria-label="Home"
         >
-          MR
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="w-full h-full object-cover"
+          />
         </a>
 
         <div className="hidden lg2:flex items-center gap-8">

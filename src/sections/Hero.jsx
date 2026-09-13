@@ -29,7 +29,7 @@ export default function Hero() {
         >
           <motion.h1
             variants={item}
-            className="font-display text-4xl sm:text-5xl font-semibold text-ink leading-[1.12] max-w-xl"
+            className="font-display text-4xl sm:text-5xl font-semibold text-ink leading-[1.12] max-w-xl text-blue-900"
           >
             {siteData.name}
           </motion.h1>
@@ -56,7 +56,7 @@ export default function Hero() {
               href="https://www.behance.net/mallikhreddy1"
               target="_blank"
               rel="noreferrer"
-              className="text-ink-soft hover:text-accent transition-colors"
+              className="text-blue-950 text-ink-soft hover:text-accent hover:underline transition-colors"
             >
               Behance profile
             </a>
@@ -65,7 +65,7 @@ export default function Hero() {
               href="https://link-vault-two-mauve.vercel.app/"
               target="_blank"
               rel="noreferrer"
-              className="text-ink-soft hover:text-accent transition-colors"
+              className=" text-blue-950 text-ink-soft hover:text-accent hover:underline transition-colors"
             >
               LinkVault
             </a>
@@ -86,7 +86,7 @@ export default function Hero() {
             className="w-56 h-56 sm:w-64 sm:h-64 object-cover rounded-lg border border-line"
           />
           <motion.div variants={item} className="w-full sm:w-64 border border-line rounded-lg p-5 bg-paper-dim">
-            <p className="text-xs font-medium text-ink-soft mb-3">Focus areas</p>
+            <p className="text-xs text-green-700 font-medium text-ink-soft mb-3">Focus areas</p>
             <ul className="space-y-2 text-sm text-ink">
               {focusAreas.map((area) => (
                 <li key={area} className="flex items-center gap-2">

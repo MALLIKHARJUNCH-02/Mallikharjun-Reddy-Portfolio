@@ -42,8 +42,8 @@ export default function Internships() {
           const isLast = index === siteData.internships.length - 1;
 
           return (
-            <motion.div key={intern.company} variants={fadeUp} className="relative pl-8 pb-10 last:pb-0">
-              {!isLast && <span className="absolute left-[5px] top-3 bottom-0 w-px bg-line" aria-hidden="true" />}
+            <motion.div key={intern.company} variants={fadeUp} className="relative pl-8 pb-10 last:pb-">
+              {!isLast && <span className="absolute left-[5px] top-3 bottom-0 w-px bg-line bg-gray-400" aria-hidden="true" />}
               <span className="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-accent" aria-hidden="true" />
 
               <h3 className="text-lg font-medium text-ink">{intern.role}</h3>

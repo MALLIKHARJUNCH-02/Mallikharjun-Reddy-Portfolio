@@ -36,7 +36,7 @@ export default function Contact() {
               target={href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
               aria-label={label}
-              className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors"
+              className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors hover:underline"
             >
               <Icon aria-hidden="true" />
               {label}
@@ -44,7 +44,7 @@ export default function Contact() {
           ))}
           <a
             href={`tel:${siteData.contact.secondaryPhone.replace(/\s+/g, "")}`}
-            className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-sm text-ink-soft hover:text-accent transition-colors hover:underline"
           >
             <FaPhoneAlt aria-hidden="true" />
             {siteData.contact.secondaryPhone}
