@@ -1,39 +1,32 @@
 import React from "react";
-import siteData from "../data/site";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import siteData from "../data/site";
+import Section from "../components/ui/Section";
+import { fadeUp, stagger, viewportOnce } from "../lib/motion";
 
-const Education = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    return (
-        <section id="education" ref={ref} className="py-16 bg-gray-950">
-            <div className="max-w-5xl mx-auto px-6">
-                <motion.h2
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }} className="text-3xl font-bold text-center mb-10 text-gray-100">
-                    Education
-                </motion.h2>
-                {siteData.education.map((edu, index) => (
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6 }}
-                        key={index} className="mb-6 p-6 rounded-2xl shadow-md bg-gray-800 border-start border-1 border-info shadow">
-                        <h3 className="text-xl font-semibold text-gray-200">{edu.degree}</h3>
-                        <p className="text-gray-300 dark:text-gray-300">{edu.institution}</p>
-                        {edu.affiliated && (
-                            <p className="text-gray-300">Affiliated To  {edu.affiliated}</p>
-                        )}
-                        <p className="text-sm text-gray-400">{edu.year}</p>
-                        <p className="mt-2 text-gray-300">{edu.description}</p>
-                    </motion.div>
-                ))}
+export default function Education() {
+  return (
+    <Section id="education" title="Education">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={stagger(0.1)}
+        className="max-w-3xl divide-y divide-line"
+      >
+        {siteData.education.map((edu) => (
+          <motion.div key={edu.degree} variants={fadeUp} className="py-6 first:pt-0 last:pb-0">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+              <h3 className="text-lg font-medium text-ink">{edu.degree}</h3>
+             <span className="text-xs text-ink-faint shrink-0">{edu.year}</span>
             </div>
-        </section>
-    );
-};
-
-export default Education;
+             <span className="text-xs text-ink-faint shrink-0">Cgpa: {edu.cgpa}</span>
+            <p className="text-sm text-ink-soft mt-1">{edu.institution}</p>
+            {edu.affiliated && <p className="text-sm text-ink-soft">Affiliated to {edu.affiliated}</p>}
+            {edu.description && <p className="mt-2 text-sm leading-relaxed text-ink-soft">{edu.description}</p>}
+          </motion.div>
+        ))}
+      </motion.div>
+    </Section>
+  );
+}

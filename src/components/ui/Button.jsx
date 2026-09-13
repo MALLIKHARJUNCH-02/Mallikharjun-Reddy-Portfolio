@@ -1,23 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "../../lib/cn";
 
-export default function Button({ children, onClick, href, download, variant = "primary" }) {
-  const baseStyles =
-    "inline-block px-6 py-2 rounded-md font-medium shadow-md transition focus:outline-none focus:ring-2 focus:ring-offset-2";
-  const variants = {
-    primary: "bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500",
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-400",
-  };
+const base =
+  "inline-flex items-center justify-center gap-2 rounded px-5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none";
 
-  const cls = `${baseStyles} ${variants[variant]}`;
+const variants = {
+  primary: "bg-ink text-paper hover:bg-accent",
+  outline: "border border-line-strong text-ink hover:border-accent hover:text-accent",
+  ghost: "text-ink-soft hover:text-accent",
+};
+
+export default function Button({
+  children,
+  onClick,
+  href,
+  download,
+  variant = "primary",
+  className,
+  target,
+  rel,
+  type = "button",
+}) {
+  const cls = cn(base, variants[variant], className);
 
   if (href) {
     return (
       <motion.a
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.98 }}
         href={href}
         download={download}
+        target={target}
+        rel={target === "_blank" ? rel || "noopener noreferrer" : rel}
         className={cls}
       >
         {children}
@@ -26,12 +40,7 @@ export default function Button({ children, onClick, href, download, variant = "p
   }
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.97 }}
-      onClick={onClick}
-      className={cls}
-    >
+    <motion.button whileTap={{ scale: 0.98 }} type={type} onClick={onClick} className={cls}>
       {children}
     </motion.button>
   );

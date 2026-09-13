@@ -69,12 +69,14 @@ wireframing, prototyping, and creating intuitive digital experiences.I enjoy bri
       institution: "Lakireddy Balireddy College of Engineering",
       affiliated: "Jawaharlal Nehru Technological University Kakinada (JNTUK)",
       year: "2020 - 2024",
+      cgpa: "7.66",
       description: "Graduated with strong foundation in electronics, programming, and web development."
     },
     {
       degree: "Intermediate",
       institution: "Sri Gayatri Junior college, Guntupalli, India",
       year: "2018 - 2020",
+      cgpa: "8.7",
     }
   ],
 

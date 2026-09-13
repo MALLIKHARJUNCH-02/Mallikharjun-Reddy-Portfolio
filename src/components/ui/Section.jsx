@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { cn } from "../../lib/cn";
+import { fadeUp, viewportOnce } from "../../lib/motion";
 
-export default function Section({ id, title, children }) {
+export default function Section({ id, title, dim = false, className, children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, viewportOnce);
+
   return (
-    <section id={id} className="py-20 px-6 sm:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto">
-        {title && <h2 className="text-3xl font-bold mb-10 text-gray-900">{title}</h2>}
+    <section
+      id={id}
+      ref={ref}
+      className={cn("py-20 sm:py-24 scroll-mt-20", dim ? "bg-paper-dim" : "bg-paper", className)}
+    >
+      <div className="container-page">
+        {title && (
+          <motion.h2
+            initial="hidden"
+            animate={isInView ? "show" : "hidden"}
+            variants={fadeUp}
+            className="section-heading mb-12"
+          >
+            {title}
+          </motion.h2>
+        )}
         {children}
       </div>
     </section>

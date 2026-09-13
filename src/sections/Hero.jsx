@@ -1,121 +1,103 @@
 import React from "react";
-import siteData from "../data/site.js"
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
-const Hero = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    return (
-        <div className="pt-20" ref={ref}>
-            <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white px-6">
-                {/* Left Content */}
-                <div className="flex-1 text-center md:text-left space-y-6">
+import siteData from "../data/site";
+import Button from "../components/ui/Button";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
-                    <motion.h1
-                        initial={{ opacity: 0, y: -30 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-6xl font-bold"
-                    >
-                        Hi, I'm <span className="text-cyan-400">{siteData.name}</span>
-                    </motion.h1>
-
-
-                    <motion.h2
-                        initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                        className="text-2xl md:text-3xl font-semibold text-gray-300">
-                        {siteData.designation}
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                        className="text-sm md:text-base font-medium text-gray-400 mt-1">
-                        {siteData.tagLine}
-                    </motion.p>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                        className="text-sm md:text-base font-medium text-gray-400">
-                        {siteData.about}
-                    </motion.p>
-                    {/* <p className="text-sm md:text-base leading-relaxed text-gray-400 max-w-xl">
-                        {siteData.about}
-                    </p> */}
-
-
-                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-center">
-                        <motion.a
-                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                            transition={{ duration: 0.6 }}
-                            href="/Mallikharjun_Resume.pdf"
-                            download
-                            className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-md font-medium shadow-lg"
-                        >
-                            📄 Download Resume
-                        </motion.a>
-                        <motion.a
-                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                            transition={{ duration: 0.6 }}
-                            href="#contact"
-                            className="bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-3 rounded-md font-medium"
-                        >
-                            Contact Me
-                        </motion.a>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-center">
-                        <motion.a
-                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                            transition={{ duration: 0.6 }}
-                            href="https://www.behance.net/mallikhreddy1"
-                            download
-                            className="bg-blue-500 hover:bg-cyan-600 px-6 py-3 rounded-md font-medium shadow-lg"
-                            target="blank"
-                        >
-                            Behance Profile
-                        </motion.a>
-
-                        <motion.a
-                            initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                            transition={{ duration: 0.6 }}
-                            href="https://link-vault-two-mauve.vercel.app/"
-                            download
-                            className="bg-green-500 text-black hover:bg-blue-600 px-6 py-3 rounded-md font-medium shadow-lg"
-                            target="blank"
-                        >
-                            LinkVault
-                        </motion.a>
-                    </div>
-                </div>
-
-                {/* Right Content (Image) */}
-                <div className="flex-1 flex justify-center mt-10 md:mt-0">
-
-                    <motion.img
-                        src="/profile.jpg"
-                        alt="Profile image Of Mallikharjun Reddy Chilukuri"
-                        title="Mallikharjun Reddy Chilukuri"
-                        initial={{ opacity: 0, y: -30, scale: 0.1 }}
-                        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                        transition={{ duration: 0.6 }}
-                        className="w-80 h-80 object-cover rounded-full shadow-2xl border-4 border-cyan-500"
-                    />
-
-                </div>
-            </section>
-
-        </div>
-    );
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09, delayChildren: 0.1 } },
 };
 
-export default Hero;
+const item = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const focusAreas = ["Java & Spring Boot", "React & Node.js", "UI/UX Design"];
+
+export default function Hero() {
+  const reduceMotion = usePrefersReducedMotion();
+
+  return (
+    <section className="pt-32 pb-20 sm:pt-40 sm:pb-28 bg-paper">
+      <div className="container-page grid lg:grid-cols-[1.3fr_0.9fr] gap-14 lg:gap-10 items-center">
+        <motion.div
+          initial={reduceMotion ? "show" : "hidden"}
+          animate="show"
+          variants={container}
+        >
+          <motion.h1
+            variants={item}
+            className="font-display text-4xl sm:text-5xl font-semibold text-ink leading-[1.12] max-w-xl"
+          >
+            {siteData.name}
+          </motion.h1>
+
+          <motion.p variants={item} className="mt-4 text-lg sm:text-xl text-ink-soft max-w-xl">
+            {siteData.designation}
+          </motion.p>
+
+          <motion.p variants={item} className="mt-5 text-base leading-relaxed text-ink-soft max-w-lg">
+            {siteData.tagLine}. {siteData.about}
+          </motion.p>
+
+          <motion.div variants={item} className="mt-9 flex flex-wrap gap-4">
+            <Button href="/Mallikharjun_Resume.pdf" download variant="primary">
+              Download Resume
+            </Button>
+            <Button href="#contact" variant="outline">
+              Get in touch
+            </Button>
+          </motion.div>
+
+          <motion.div variants={item} className="mt-6 flex flex-wrap gap-4 text-sm">
+            <a
+              href="https://www.behance.net/mallikhreddy1"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-soft hover:text-accent transition-colors"
+            >
+              Behance profile
+            </a>
+            <span className="text-line-strong">/</span>
+            <a
+              href="https://link-vault-two-mauve.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink-soft hover:text-accent transition-colors"
+            >
+              LinkVault
+            </a>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={reduceMotion ? "show" : "hidden"}
+          animate="show"
+          variants={container}
+          className="flex flex-col items-center lg:items-end gap-6"
+        >
+          <motion.img
+            variants={item}
+            src="/profile.jpg"
+            alt="Portrait of Mallikharjun Reddy Chilukuri"
+            title="Mallikharjun Reddy Chilukuri"
+            className="w-56 h-56 sm:w-64 sm:h-64 object-cover rounded-lg border border-line"
+          />
+          <motion.div variants={item} className="w-full sm:w-64 border border-line rounded-lg p-5 bg-paper-dim">
+            <p className="text-xs font-medium text-ink-soft mb-3">Focus areas</p>
+            <ul className="space-y-2 text-sm text-ink">
+              {focusAreas.map((area) => (
+                <li key={area} className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
+                  {area}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

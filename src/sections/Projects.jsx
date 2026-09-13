@@ -1,54 +1,54 @@
 import React from "react";
-import siteData from "../data/site";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
-const Projects = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    return (
-        <section id="projects" ref={ref} className="py-16 bg-gray-950">
-            <div className="max-w-6xl mx-auto px-6">
-                <motion.h2
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }}
-                    className="text-3xl font-bold text-center mb-10 text-gray-100">
-                    Projects
-                </motion.h2>
-                <div className="grid sm:grid-cols-2 gap-8">
-                    {siteData.projects.map((project, index) => (
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6 }}
-                            key={index} className="p-6 rounded-2xl shadow-md bg-gray-800 dark:bg-gray-800 border-start border-1 border-info shadow">
-                            <h3 className="text-xl font-semibold text-gray-200">{project.title}</h3>
-                            <p className="mt-2 text-gray-300 dark:text-gray-300">{project.description}</p>
+import siteData from "../data/site";
+import Section from "../components/ui/Section";
+import { fadeUp, stagger, viewportOnce } from "../lib/motion";
 
-                            <button type="button" className="m-4 btn btn-outline-info"><a href={project.link} target="_blank" rel="noopener noreferrer"
-                                className="inline-block hover:underline">
-                                📦 Source Code
-                            </a></button>
-                            {project.livelink && (
-                               
+function ArrowLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent transition-colors"
+    >
+      {children}
+      <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5">›</span>
+    </a>
+  );
+}
 
-                                <button type="button" className="m-4 btn btn-outline-info"><a
-                                    href={project.livelink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block hover:underline"
-                                >
-                                    🌐 Live Demo
-                                </a></button>
-                            )}
+function ProjectCard({ project }) {
+  return (
+    <motion.article
+      variants={fadeUp}
+      className="group p-6 rounded-lg border border-line bg-paper hover:border-line-strong hover:shadow-card-hover transition-all duration-300"
+    >
+      <h3 className="text-lg font-medium text-ink leading-snug">{project.title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{project.description}</p>
 
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};
+      <div className="mt-6 flex items-center gap-5 pt-4 border-t border-line">
+        <ArrowLink href={project.link}>Source</ArrowLink>
+        {project.livelink && <ArrowLink href={project.livelink}>Live demo</ArrowLink>}
+      </div>
+    </motion.article>
+  );
+}
 
-export default Projects;
+export default function Projects() {
+  return (
+    <Section id="projects" title="Projects">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={stagger()}
+        className="grid sm:grid-cols-2 gap-6"
+      >
+        {siteData.projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </motion.div>
+    </Section>
+  );
+}
