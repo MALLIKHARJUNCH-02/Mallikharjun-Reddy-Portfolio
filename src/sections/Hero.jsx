@@ -60,7 +60,7 @@ export default function Hero() {
             >
               Behance profile
             </a>
-            <span className="text-line-strong">/</span>
+            {/* <span className="text-line-strong">/</span>
             <a
               href="https://link-vault-two-mauve.vercel.app/"
               target="_blank"
@@ -68,7 +68,7 @@ export default function Hero() {
               className=" text-blue-950 text-ink-soft hover:text-accent hover:underline transition-colors"
             >
               LinkVault
-            </a>
+            </a> */}
           </motion.div>
         </motion.div>
 
